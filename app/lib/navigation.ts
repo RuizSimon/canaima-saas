@@ -5,6 +5,21 @@ export type NavItem = {
 
 export const sidebarItems: NavItem[] = [
   { label: 'Dashboard', href: '/' },
+ codex/improve-project-structure-for-saas-platform-1xch2d
+  { label: 'Solicitudes de servicio', href: '/solicitudes' },
+  { label: 'Asignar viaje', href: '#' },
+  { label: 'Viajes reservados', href: '#' },
+  { label: 'Viajes asignados', href: '#' },
+  { label: 'Viajes completados', href: '#' },
+  { label: 'Hoja de ruta', href: '#' },
+  { label: 'Clientes / Organizaciones', href: '#' },
+  { label: 'Choferes', href: '#' },
+  { label: 'Vehículos', href: '#' },
+  { label: 'Facturación', href: '#' },
+  { label: 'Mantenimiento', href: '#' },
+  { label: 'Gastos de gasolina', href: '#' },
+  { label: 'Nómina', href: '#' },
+=======
   { label: 'Solicitudes de servicio', href: '/solicitudes-servicio' },
   { label: 'Asignar viaje', href: '/asignar-viaje' },
   { label: 'Viajes reservados', href: '/viajes-reservados' },
@@ -18,4 +33,5 @@ export const sidebarItems: NavItem[] = [
   { label: 'Mantenimiento', href: '/mantenimiento' },
   { label: 'Gastos de gasolina', href: '/gastos-gasolina' },
   { label: 'Nómina', href: '/nomina' },
+ main
 ];
