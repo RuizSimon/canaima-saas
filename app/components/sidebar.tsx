@@ -1,3 +1,4 @@
+ codex/improve-project-structure-for-saas-platform-1xch2d
 'use client';
 
 import Link from 'next/link';
@@ -7,6 +8,16 @@ import { sidebarItems } from '@/app/lib/navigation';
 export function Sidebar() {
   const pathname = usePathname();
 
+=======
+import Link from 'next/link';
+import { sidebarItems } from '@/app/lib/navigation';
+
+type SidebarProps = {
+  activePath?: string;
+};
+
+export function Sidebar({ activePath = '/' }: SidebarProps) {
+ main
   return (
     <aside className="w-full border-b border-slate-800 bg-slate-950 px-4 py-6 text-slate-100 lg:w-72 lg:border-b-0 lg:border-r lg:px-5">
       <div className="mb-6 rounded-xl border border-slate-800 bg-slate-900/70 p-4">
@@ -18,7 +29,11 @@ export function Sidebar() {
       <nav aria-label="Menú principal">
         <ul className="space-y-1">
           {sidebarItems.map((item) => {
+ codex/improve-project-structure-for-saas-platform-1xch2d
             const isActive = item.href === pathname;
+=======
+            const isActive = item.href === activePath;
+ main
 
             return (
               <li key={item.label}>
