@@ -30,7 +30,7 @@ const weeklyUsage = [72, 76, 79, 73, 88, 91, 85];
 export default function Home() {
   return (
     <AppShell>
-      <header className="mb-6 rounded-2xl border border-[var(--border-soft)] bg-white px-5 py-5 shadow-[0_6px_20px_rgba(15,23,42,0.04)]">
+      <header className="mb-6 rounded-2xl border border-[var(--border-soft)] bg-white px-5 py-5 shadow-[0_14px_32px_rgba(15,23,42,0.08)]">
         <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
           <div>
             <div className="mb-3 inline-flex w-36 rounded-md border border-[var(--border-soft)] bg-[var(--surface-soft)] px-2 py-1.5">

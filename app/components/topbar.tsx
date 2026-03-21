@@ -9,7 +9,7 @@ type TopbarProps = {
 
 export function Topbar({ title, subtitle, actionLabel }: TopbarProps) {
   return (
-    <header className="mb-6 rounded-2xl border border-[var(--border-soft)] bg-white px-5 py-4 shadow-[0_6px_20px_rgba(15,23,42,0.04)]">
+    <header className="mb-6 rounded-2xl border border-[var(--border-soft)] bg-white/95 px-5 py-4 shadow-[0_12px_30px_rgba(15,23,42,0.06)] backdrop-blur-sm">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <div className="mb-2 w-32 rounded-md border border-[var(--border-soft)] bg-[var(--surface-soft)] px-2 py-1.5">
@@ -33,7 +33,7 @@ export function Topbar({ title, subtitle, actionLabel }: TopbarProps) {
           </button>
 
           <div className="flex items-center gap-2 rounded-xl border border-[var(--border-soft)] bg-white px-2 py-1.5">
-            <div className="h-8 w-8 rounded-lg bg-[var(--brand-primary)] text-white grid place-content-center text-xs font-semibold">
+            <div className="grid h-8 w-8 place-content-center rounded-lg bg-[var(--brand-primary)] text-xs font-semibold text-white">
               CE
             </div>
             <div className="pr-2">
