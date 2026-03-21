@@ -1,13 +1,26 @@
 @import 'tailwindcss';
 
 :root {
+ codex/improve-project-structure-for-saas-platform-3srlgs
+  --brand-primary: #1c2a4d;
+  --brand-primary-hover: #24365f;
+  --success: #0f9f6f;
+  --warning: #d78b21;
+  --danger: #d33d4c;
+  --surface-main: #f4f7fc;
+  --surface-soft: #edf2fb;
+  --border-soft: #d9e0ef;
+  --text-main: #16213d;
+  --text-muted: #607091;
+
   --background: #f1f5f9;
   --foreground: #0f172a;
+ main
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--surface-main);
+  --color-foreground: var(--text-main);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -18,6 +31,12 @@
 
 body {
   margin: 0;
+ codex/improve-project-structure-for-saas-platform-3srlgs
+  background: var(--surface-main);
+  color: var(--text-main);
+  font-family: var(--font-geist-sans), sans-serif;
+
   background: var(--background);
   color: var(--foreground);
+ main
 }
