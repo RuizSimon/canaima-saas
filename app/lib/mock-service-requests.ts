@@ -1,58 +1,61 @@
-export type ServiceStatus = 'Pendiente' | 'Asignado' | 'En ruta' | 'Completado';
+export type ServiceStatus = 'Pendiente' | 'Asignada' | 'Completada';
 
 export type ServiceRequest = {
   id: string;
-  organization: string;
-  date: string;
+  client: string;
   origin: string;
   destination: string;
+  date: string;
+  time: string;
+  serviceType: string;
+  notes: string;
   status: ServiceStatus;
-  driver: string;
-  vehicle: string;
+};
+
+export type CreateServiceRequestInput = {
+  client: string;
+  origin: string;
+  destination: string;
+  date: string;
+  time: string;
+  serviceType: string;
+  notes: string;
 };
 
 export const serviceRequests: ServiceRequest[] = [
   {
     id: 'SRV-2401',
-    organization: 'Grupo Andino',
-    date: '2026-03-20',
+    client: 'Grupo Andino',
     origin: 'Caracas Centro',
     destination: 'Chacao',
+    date: '2026-03-21',
+    time: '08:30',
+    serviceType: 'Traslado corporativo',
+    notes: 'Requiere llegada 10 minutos antes.',
     status: 'Pendiente',
-    driver: 'Por asignar',
-    vehicle: 'Por asignar',
   },
   {
     id: 'SRV-2402',
-    organization: 'Hospital Metropolitano',
-    date: '2026-03-20',
+    client: 'Hospital Metropolitano',
     origin: 'Baruta',
     destination: 'Los Palos Grandes',
-    status: 'Asignado',
-    driver: 'José Contreras',
-    vehicle: 'VAN-14',
+    date: '2026-03-21',
+    time: '09:10',
+    serviceType: 'Ruta fija',
+    notes: 'Unidad con acceso prioritario.',
+    status: 'Asignada',
   },
   {
     id: 'SRV-2403',
-    organization: 'Universidad Central',
-    date: '2026-03-21',
+    client: 'Universidad Central',
     origin: 'Ciudad Universitaria',
     destination: 'La California',
-    status: 'En ruta',
-    driver: 'María Silva',
-    vehicle: 'BUS-09',
-  },
-  {
-    id: 'SRV-2404',
-    organization: 'Centro Empresarial Torre Sur',
-    date: '2026-03-19',
-    origin: 'Altamira',
-    destination: 'La Castellana',
-    status: 'Completado',
-    driver: 'Carlos Pérez',
-    vehicle: 'VAN-05',
+    date: '2026-03-20',
+    time: '07:45',
+    serviceType: 'Traslado especial',
+    notes: 'Confirmar punto de encuentro interno.',
+    status: 'Completada',
   },
 ];
 
-export const shiftOptions = ['Mañana', 'Tarde', 'Noche'];
 export const serviceTypeOptions = ['Traslado corporativo', 'Ruta fija', 'Traslado especial'];
