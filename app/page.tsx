@@ -1,8 +1,14 @@
 import { AppShell } from '@/app/components/app-shell';
+ codex/improve-project-structure-for-saas-platform-3srlgs
 import { BrandLogo } from '@/app/components/branding/brand-logo';
 import { KpiCard } from '@/app/components/kpi-card';
 import { Card } from '@/app/components/ui/card';
 import { SectionHeader } from '@/app/components/ui/section-header';
+
+import { KpiCard } from '@/app/components/kpi-card';
+import { SectionCard } from '@/app/components/section-card';
+import { Topbar } from '@/app/components/topbar';
+ main
 
 const kpis = [
   { title: 'Solicitudes activas', value: '128', trend: '+12% vs semana pasada' },
@@ -24,12 +30,16 @@ const recentActivities = [
   'Factura #FAC-9041 emitida para cliente corporativo Andina.',
   'Aprobada carga de gasolina para flota nocturna.',
 ];
+ codex/improve-project-structure-for-saas-platform-3srlgs
 
 const weeklyUsage = [72, 76, 79, 73, 88, 91, 85];
+
+ main
 
 export default function Home() {
   return (
     <AppShell>
+ codex/improve-project-structure-for-saas-platform-3srlgs
       <header className="mb-6 rounded-2xl border border-[var(--border-soft)] bg-white px-5 py-5 shadow-[0_6px_20px_rgba(15,23,42,0.04)]">
         <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
           <div>
@@ -66,6 +76,9 @@ export default function Home() {
         </div>
       </header>
 
+      <Topbar />
+ main
+
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {kpis.map((card) => (
           <KpiCard
@@ -78,6 +91,7 @@ export default function Home() {
         ))}
       </section>
 
+ codex/improve-project-structure-for-saas-platform-3srlgs
       <section className="mt-6 grid gap-4 xl:grid-cols-3">
         <Card className="xl:col-span-2">
           <SectionHeader
@@ -127,10 +141,28 @@ export default function Home() {
           <ul className="space-y-2 text-sm text-[var(--text-main)]">
             {recentActivities.map((activity) => (
               <li key={activity} className="rounded-xl border border-[var(--border-soft)] bg-[var(--surface-soft)] px-3 py-2.5">
+
+      <section className="mt-6 grid gap-4 lg:grid-cols-2">
+        <SectionCard title="Hoja de ruta prioritaria" description="Próximos despachos confirmados para hoy">
+          <ul className="space-y-2 text-sm text-slate-700">
+            {routeTasks.map((task) => (
+              <li key={task} className="rounded-lg border border-slate-100 bg-slate-50 px-3 py-2">
+                {task}
+              </li>
+            ))}
+          </ul>
+        </SectionCard>
+
+        <SectionCard title="Actividad reciente" description="Eventos operativos y administrativos">
+          <ul className="space-y-2 text-sm text-slate-700">
+            {recentActivities.map((activity) => (
+              <li key={activity} className="rounded-lg border border-slate-100 bg-slate-50 px-3 py-2">
+ main
                 {activity}
               </li>
             ))}
           </ul>
+ codex/improve-project-structure-for-saas-platform-3srlgs
         </Card>
       </section>
 
@@ -148,6 +180,9 @@ export default function Home() {
             ))}
           </div>
         </Card>
+
+        </SectionCard>
+ main
       </section>
     </AppShell>
   );
